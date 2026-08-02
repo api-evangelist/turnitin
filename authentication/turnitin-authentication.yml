@@ -1,0 +1,39 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  https://developers.turnitin.com/turnitin-core-api and
+  https://developers.turnitin.com/turnitin-core-api/faq — the Turnitin Core API
+  (TCA) developer guides. No public OpenAPI is available (the API Reference is
+  behind a customer login), so this profile is captured from the published
+  developer documentation rather than derived from a spec.
+api: Turnitin Core API (TCA)
+summary:
+  types:
+    - apiKey
+schemes:
+  - name: tca-api-key
+    type: apiKey
+    in: header
+    description: >-
+      TCA authenticates each request with an API key. An API key exists under an
+      "integration instance"; a tenant can have multiple integration instances
+      (typically at least one Sandbox and one Production instance). All data
+      created within an integration instance is scoped to that instance. The key
+      is issued from the Turnitin administrator console for the integration
+      instance.
+    docs: https://developers.turnitin.com/turnitin-core-api
+required_headers:
+  - name: X-Turnitin-Integration-Name
+    description: >-
+      Identifies the integrating platform. Set to the name of your LMS or
+      software. Required on TCA requests.
+  - name: X-Turnitin-Integration-Version
+    description: >-
+      The version of your integrating platform/software. Required on TCA
+      requests; also used by Turnitin to track integration versions.
+notes: >-
+  TCA is a RESTful API. Turnitin also supports LTI (Learning Tools
+  Interoperability) as a separate integration path
+  (https://developers.turnitin.com/learning-tools-interoperability), which uses
+  the LTI/OAuth handshake rather than the TCA API key. This profile covers the
+  TCA REST surface only.

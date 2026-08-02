@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  Live probe of the /.well-known/ discovery surface for the Turnitin base hosts
+  in apis.yml (turnitin.com / www.turnitin.com) and the developer host
+  (developers.turnitin.com). Status is the HTTP code observed at fetch time.
+  Only documents that returned a real, correctly-typed payload were saved
+  verbatim.
+hosts:
+  - host: https://www.turnitin.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        type: text/plain
+        file: turnitin-security.txt
+        note: RFC 9116 coordinated vulnerability disclosure policy.
+  - host: https://developers.turnitin.com
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 200
+        note: >-
+          Returns an HTML error page that meta-refreshes to
+          https://oops.turnitin.com/ — a soft-404, not a real OIDC document. Not
+          saved.
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404

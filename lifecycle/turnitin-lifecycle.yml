@@ -1,0 +1,40 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  https://developers.turnitin.com/turnitin-core-api/certification-review,
+  https://developers.turnitin.com/turnitin-core-api/faq, and the live status
+  page at https://turnitin.statuspage.io. Captures the operational lifecycle
+  surface for the Turnitin Core API (TCA).
+api: Turnitin Core API (TCA)
+
+status_page:
+  url: https://turnitin.statuspage.io
+  platform: Atlassian Statuspage
+  live: true
+
+versioning:
+  scheme: integration-version-header
+  detail: >-
+    Integrators declare their platform version per request via the
+    X-Turnitin-Integration-Version header. TCA feature/behavior changes are
+    communicated through the developer guides. No public dated changelog or
+    RFC 8594 Sunset/Deprecation header policy is documented on the public
+    (non-login) surface.
+
+certification:
+  detail: >-
+    New TCA integrations pass a Certification Review before being promoted from
+    a Sandbox integration instance to Production.
+  docs: https://developers.turnitin.com/turnitin-core-api/certification-review
+
+deprecation:
+  policy_published: false
+  detail: >-
+    No public deprecation/sunset policy located on the non-login developer
+    surface (the full API Reference is behind a customer login).
+
+sla:
+  published: false
+  detail: >-
+    No public SLA document located; TCA notes SOC2 compliance and international
+    data centers on the integration overview.

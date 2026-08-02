@@ -1,0 +1,86 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  https://developers.turnitin.com/turnitin-core-api,
+  https://developers.turnitin.com/turnitin-core-api/best-practice, and
+  https://developers.turnitin.com/turnitin-core-api/faq — cross-cutting
+  request/response conventions that apply across the Turnitin Core API (TCA),
+  captured from the public developer guides (the full API Reference is behind a
+  customer login).
+api: Turnitin Core API (TCA)
+api_style: RESTful over HTTPS, JSON responses
+
+authentication:
+  scheme: Integration-instance API key (HTTP header)
+  required_headers:
+    - X-Turnitin-Integration-Name
+    - X-Turnitin-Integration-Version
+  detail: authentication/turnitin-authentication.yml
+  docs: https://developers.turnitin.com/turnitin-core-api
+
+tenancy:
+  model: >-
+    Work is scoped to an "integration instance" under a tenant. A tenant can
+    hold multiple integration instances (e.g. Sandbox and Production); data
+    created in one instance is isolated to that instance.
+  docs: https://developers.turnitin.com/turnitin-core-api/faq
+
+eula_workflow:
+  required: true
+  detail: >-
+    Submissions require acceptance of the Turnitin EULA. Best-practice guidance
+    dedicates a section to the EULA workflow — surface acceptance to the end
+    user before generating a Similarity Report. The EULA and viewer are
+    localized (English, Dutch, German, Norwegian, Danish, Swedish, French,
+    Spanish, with more languages added over time).
+  docs: https://developers.turnitin.com/turnitin-core-api/best-practice
+
+async_processing:
+  model: polling
+  detail: >-
+    Submission processing and Similarity Report generation are asynchronous.
+    TCA best practice prescribes "Retry and polling" logic — submit, then poll
+    the resource status until processing completes, rather than expecting a
+    synchronous result. No webhook/callback surface is documented for TCA.
+  docs: https://developers.turnitin.com/turnitin-core-api/best-practice
+
+logging:
+  detail: >-
+    Best practice calls for client-side logging of TCA request/response activity
+    to support troubleshooting and support cases.
+  docs: https://developers.turnitin.com/turnitin-core-api/best-practice
+
+supported_upload_formats:
+  source: https://developers.turnitin.com/turnitin-core-api/faq
+  formats:
+    - .pdf
+    - .doc
+    - .docx
+    - .ppt
+    - .pps
+    - .ppsx
+    - .pptx
+    - .xls
+    - .xlsx
+    - .ps
+    - .rtf
+    - .htm
+    - .html
+    - .wpd
+    - .odt
+    - .txt
+    - .hwp
+    - .hwpx
+
+versioning:
+  detail: >-
+    Integration version is carried per-request via the
+    X-Turnitin-Integration-Version header. TCA changes are communicated through
+    the developer guides and the certification-review process.
+  docs: https://developers.turnitin.com/turnitin-core-api/certification-review
+
+cross_links:
+  authentication: authentication/turnitin-authentication.yml
+  sandbox: sandbox/turnitin-sandbox.yml
+  lifecycle: lifecycle/turnitin-lifecycle.yml
+  conformance: conformance/turnitin-conformance.yml

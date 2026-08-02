@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  https://developers.turnitin.com/turnitin-core-api/faq — Turnitin Core API
+  (TCA) integration-instance model. Turnitin provides sandbox testing through
+  dedicated Sandbox integration instances rather than published test tokens or
+  test cards, so no fixed test values are captured (none are published).
+api: Turnitin Core API (TCA)
+sandbox:
+  available: true
+  model: integration-instance
+  detail: >-
+    Each tenant can create multiple "integration instances", including at least
+    one Sandbox instance and one Production instance. A Sandbox integration
+    instance issues its own API key and isolates all data created within it, so
+    integrators can build and certify against Sandbox before switching the
+    integration to Production.
+  key_isolation: >-
+    API keys are per integration instance; the Sandbox key is distinct from the
+    Production key. There is no shared/hosted global test key.
+  test_fixtures: >-
+    Turnitin does not publish fixed test documents, test tokens, or trigger
+    values; testing is performed by submitting real documents into a Sandbox
+    integration instance.
+  certification: >-
+    Turnitin runs a Certification Review before an integration is approved for
+    Production use.
+  docs:
+    - https://developers.turnitin.com/turnitin-core-api/faq
+    - https://developers.turnitin.com/turnitin-core-api/certification-review

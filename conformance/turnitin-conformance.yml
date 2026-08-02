@@ -1,0 +1,55 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  https://developers.turnitin.com/turnitin-core-api (TCA developer guides),
+  https://developers.turnitin.com/learning-tools-interoperability (LTI),
+  https://github.com/turnitin (public org, incl. scim-examples), and the RFC
+  9116 security.txt at https://www.turnitin.com/.well-known/security.txt.
+  Cross-cutting / industry standards Turnitin's public integration surface
+  claims or demonstrably conforms to.
+standards:
+  - id: rest
+    conforms: true
+    evidence: >-
+      TCA is described as a RESTful API for third-party integration
+      (developers.turnitin.com/turnitin-core-api).
+  - id: lti
+    conforms: true
+    evidence: >-
+      Turnitin publishes a Learning Tools Interoperability (LTI) integration
+      path (developers.turnitin.com/learning-tools-interoperability) and ships
+      LTI consumer tooling in its GitHub org.
+  - id: scim
+    conforms: true
+    evidence: >-
+      Turnitin maintains a public scim-examples repository
+      (github.com/turnitin/scim-examples), indicating SCIM-based user
+      provisioning support.
+  - id: soc2
+    conforms: true
+    evidence: >-
+      TCA integration page lists "SOC2 compliance" and international data
+      centers as reasons to integrate
+      (developers.turnitin.com/turnitin-core-api).
+  - id: rfc9116
+    conforms: true
+    evidence: >-
+      RFC 9116-compliant security.txt published at
+      www.turnitin.com/.well-known/security.txt with a coordinated vulnerability
+      disclosure policy and PGP encryption key.
+  - id: oauth2
+    conforms: false
+    evidence: >-
+      TCA authenticates with an integration-instance API key (header), not
+      OAuth 2.0. (LTI launches use their own OAuth handshake, but the TCA REST
+      surface does not expose OAuth 2.0.)
+  - id: oidc
+    conforms: false
+    evidence: >-
+      No valid /.well-known/openid-configuration; the developer host returns a
+      soft-404 for the path.
+  - id: rfc9457
+    conforms: false
+    evidence: >-
+      No public evidence of application/problem+json (RFC 9457) error envelopes;
+      the API Reference is behind a customer login.
