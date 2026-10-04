@@ -60,6 +60,7 @@ tags:
 - Research Integrity
 - Publishing
 - LTI
+- Grading
 apis:
 - name: Turnitin Core API (TCA)
   description: >-
@@ -148,6 +149,8 @@ common:
   url: lifecycle/turnitin-lifecycle.yml
 - type: LLMsTxt
   url: llms/turnitin-llms.txt
+- type: APIReference
+  url: https://developers.turnitin.com/turnitin-core-api/documentation
 x-enrichment:
   date: '2026-07-21'
   status: enriched
