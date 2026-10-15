@@ -56,10 +56,45 @@ edges:
   category: other
   features:
   - instant_login
+- partner_name: eduGAIN
+  partner: null
+  type: register
+  channel: standard-directory
+  relationship: network-participant
+  direction: partner-built
+  evidence: https://technical.edugain.org/api.php?action=list_entities&type=sp&format=json
+  category: research and education identity federation
+  contract_reference:
+    network: eduGAIN (GÉANT interfederation)
+    spec_file: null
+    roles:
+    - service-provider
+    role: service-provider
+    federations:
+    - INCOMMON
+    matched_by: domain+verified:turnitin.com
+    entities:
+    - entity_id: https://shibboleth.turnitin.com/shibboleth
+      role: service-provider
+      federation: INCOMMON
+      display_name: Turnitin
+      entity_categories:
+      - '5'
+      - '43'
+      - '76'
+      - '220'
+      sirtfi: true
+      coco: true
+    detected_by: sweep-higher-ed.py
+    detected: '2026-10-15'
+  detected_by: sweep-higher-ed.py
+  first_seen: '2026-10-15'
 generated: '2026-10-14'
 method: searched
 checked:
 - clever/integrations/clever-integration-edges.yml
 - https://site.imsglobal.org/certifications
+- https://technical.edugain.org/api.php?action=list_entities&type=idp&format=json
+- https://technical.edugain.org/api.php?action=list_entities&type=sp&format=json
 source:
 - clever/integrations/clever-integration-edges.yml
