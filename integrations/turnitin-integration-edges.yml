@@ -1,76 +1,4 @@
 edges:
-- partner_name: 1EdTech
-  partner: null
-  type: contract
-  channel: standard-directory
-  relationship: standard-participant
-  direction: partner-built
-  evidence: https://site.imsglobal.org/certifications
-  category: 1EdTech certified products
-  contract_reference:
-    register: 1EdTech certified product directory (TrustEd Apps)
-    spec_file: null
-    standard: 1EdTech
-    role: Contributing Member
-    registered_name: Turnitin
-    matched_domain: turnitin.com
-    matched_by: domain
-    standards:
-    - LTI Advantage
-    - LTI Advantage Complete
-    - Learning Tools Interoperability (LTI) v1.3
-    certified_products:
-    - product: Turnitin
-      version: v1.0
-      standards:
-      - LTI Advantage
-      - LTI Advantage Complete
-      - Learning Tools Interoperability (LTI) v1.3
-      implementation:
-      - 'Extension: LTI Assignment & Grade Services 2.0'
-      - 'Extension: LTI Deep Linking 2.0'
-      - 'Extension: LTI Names and Role Provisioning Services 2.0'
-      - 'Type: Tool'
-      attributes:
-      - Certified Product
-      - Vetted
-      lapsed: false
-      url: https://site.imsglobal.org/certifications/turnitin/turnitin/v10
-    detected_by: sweep-edtech.py
-    detected: '2026-10-14'
-- partner_name: eduGAIN
-  partner: null
-  type: register
-  channel: standard-directory
-  relationship: network-participant
-  direction: partner-built
-  evidence: https://technical.edugain.org/api.php?action=list_entities&type=sp&format=json
-  category: research and education identity federation
-  contract_reference:
-    network: eduGAIN (GÉANT interfederation)
-    spec_file: null
-    roles:
-    - service-provider
-    role: service-provider
-    federations:
-    - INCOMMON
-    matched_by: domain+verified:turnitin.com
-    entities:
-    - entity_id: https://shibboleth.turnitin.com/shibboleth
-      role: service-provider
-      federation: INCOMMON
-      display_name: Turnitin
-      entity_categories:
-      - '5'
-      - '43'
-      - '76'
-      - '220'
-      sirtfi: true
-      coco: true
-    detected_by: sweep-higher-ed.py
-    detected: '2026-10-15'
-  detected_by: sweep-higher-ed.py
-  first_seen: '2026-10-15'
 - partner_name: Clever (clever-app-gallery)
   partner: clever
   partner_match: mirror
@@ -125,6 +53,78 @@ edges:
   category: Microsoft Teams app
   publisher_verified:
   - Microsoft 365 Certified
+- partner_name: 1EdTech
+  partner: null
+  type: contract
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://site.imsglobal.org/certifications
+  category: 1EdTech certified products
+  contract_reference:
+    register: 1EdTech certified product directory (TrustEd Apps)
+    spec_file: null
+    standard: 1EdTech
+    role: Contributing Member
+    registered_name: Turnitin
+    matched_domain: turnitin.com
+    matched_by: domain
+    standards:
+    - LTI Advantage
+    - LTI Advantage Complete
+    - Learning Tools Interoperability (LTI) v1.3
+    certified_products:
+    - product: Turnitin
+      version: v1.0
+      standards:
+      - LTI Advantage
+      - LTI Advantage Complete
+      - Learning Tools Interoperability (LTI) v1.3
+      implementation:
+      - 'Extension: LTI Assignment & Grade Services 2.0'
+      - 'Extension: LTI Deep Linking 2.0'
+      - 'Extension: LTI Names and Role Provisioning Services 2.0'
+      - 'Type: Tool'
+      attributes:
+      - Certified Product
+      - Vetted
+      lapsed: false
+      url: https://site.imsglobal.org/certifications/turnitin/turnitin/v10
+    detected_by: sweep-edtech.py
+    detected: '2026-10-19'
+- partner_name: eduGAIN
+  partner: null
+  type: register
+  channel: standard-directory
+  relationship: network-participant
+  direction: partner-built
+  evidence: https://technical.edugain.org/api.php?action=list_entities&type=sp&format=json
+  category: research and education identity federation
+  contract_reference:
+    network: eduGAIN (GÉANT interfederation)
+    spec_file: null
+    roles:
+    - service-provider
+    role: service-provider
+    federations:
+    - INCOMMON
+    matched_by: domain+verified:turnitin.com
+    entities:
+    - entity_id: https://shibboleth.turnitin.com/shibboleth
+      role: service-provider
+      federation: INCOMMON
+      display_name: Turnitin
+      entity_categories:
+      - '5'
+      - '43'
+      - '76'
+      - '220'
+      sirtfi: true
+      coco: true
+    detected_by: sweep-higher-ed.py
+    detected: '2026-10-19'
+  detected_by: sweep-higher-ed.py
+  first_seen: '2026-10-19'
 generated: '2026-10-14'
 method: searched
 checked:
