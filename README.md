@@ -64,6 +64,94 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Turnitin is a company surfaced as a portfolio company of norwest-venture-partners and added to the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a lead awaiting the enrichment pipeline.
+Turnitin is an academic and research integrity company that for more than 20 years has provided plagiarism/similarity detection, AI-writing detection, online grading, and feedback tools for educators, researchers, and publishers. Its market-leading integrity services are exposed to third-party platforms through the RESTful Turnitin Core API (TCA), which lets an integrating product submit a document, generate a Similarity Report, and display it to users without leaving the host platform, plus a Learning Tools Interoperability (LTI) path for LMS integrations. TCA is SOC2 compliant and runs across international data centers. Turnitin was surfaced as a portfolio company of Norwest Venture Partners and enriched into the API Evangelist network from its public developer documentation.
 
-Backed by: norwest-venture-partners — https://turnitin.com
+**Areas:** Company · Education · EdTech · Academic Integrity · Plagiarism Detection · Similarity · AI Detection · Assessment · Research Integrity · Publishing · LTI · Grading
+
+## Turnitin on APIs.io
+
+Everything profiled for Turnitin is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/turnitin/](https://apis.io/providers/turnitin/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Turnitin Core API (TCA)](https://apis.io/apis/turnitin/turnitin-core-api-tca/) — RESTful API for integrating Turnitin's integrity services into third-party platforms — submit a document, generate a Similarity Report, and display it to…
+- [Turnitin Learning Tools Interoperability (LTI)](https://apis.io/apis/turnitin/turnitin-learning-tools-interoperability-lti/) — LTI integration path for embedding Turnitin into learning management systems, as an alternative to the TCA REST surface.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Turnitin Authentication](https://apis.io/security/turnitin/turnitin-authentication/)
+- [Turnitin Domain Security](https://apis.io/security/turnitin/turnitin-domain-security/)
+- [Turnitin Vulnerability Disclosure](https://apis.io/security/turnitin/turnitin-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.turnitin.com)
+- [Documentation](https://developers.turnitin.com/turnitin-core-api)
+- [API reference](https://developers.turnitin.com/turnitin-core-api)
+- [Support](https://helpcenter.turnitin.com)
+- [Blog](https://www.turnitin.com/blog/)
+- [Terms of service](https://www.turnitin.com/terms-of-use-website/)
+- [Privacy policy](https://www.turnitin.com/privacy-policy-website/)
+- [GitHub](https://github.com/turnitin)
+- [Status](https://turnitin.statuspage.io)
+
+## API Evangelist rating
+
+**Kin Score 35.9** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 5.3 |
+| Contract governance | 18.2 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 52.4 |
+| Access clarity | 35.5 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 43.1** — Education & Research
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/turnitin/](https://apis.io/providers/turnitin/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Turnitin: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/turnitin/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
